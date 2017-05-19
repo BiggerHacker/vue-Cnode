@@ -1,6 +1,10 @@
 # cnode
 
-> my Cnode vue app
+> 基于Vue+vuex+vue-router+axios+scss开发的cnode社区APP
+
+## 在线预览
+
+[使用chrome的移动端调试工具打开](https://biggerhacker.github.io/doc/vue-Cnode) 
 
 ## Build Setup
 
