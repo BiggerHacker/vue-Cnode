@@ -1,6 +1,6 @@
 # cnode
 
-> 基于Vue+vuex+vur-router+axios+scss开发的cnode社区APP
+> 基于Vue+vuex+vue-router+axios+scss开发的cnode社区APP
 
 ## Build Setup
 
