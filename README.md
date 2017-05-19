@@ -2,6 +2,10 @@
 
 > 基于Vue+vuex+vue-router+axios+scss开发的cnode社区APP
 
+## cnode
+
+[在线预览](https://biggerhacker.github.io/doc/vue-Cnode) 
+
 ## Build Setup
 
 ``` bash
