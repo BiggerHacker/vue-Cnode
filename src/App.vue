@@ -63,7 +63,7 @@
     width: 100%;
     height: 100%;
   }
-  .tip {
+  .tip-wrap {
     position: absolute;
     left: 50%;
     top: 50%;
