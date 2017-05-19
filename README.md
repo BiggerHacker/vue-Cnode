@@ -4,7 +4,7 @@
 
 ## 在线预览
 
-[使用chrome的移动端调试工具打开](https://biggerhacker.github.io/doc/vue-Cnode) 
+[PC端使用chrome的移动端调试工具打开](https://biggerhacker.github.io/doc/vue-Cnode) 
 
 ## Build Setup
 
