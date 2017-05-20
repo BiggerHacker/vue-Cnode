@@ -36,11 +36,11 @@
           },
           {
             name: '发布',
-            link: '/release'
+            link: '/create'
           },
           {
             name: '个人',
-            link: '/me'
+            link: '/profile'
           },
           {
             name: '关于',

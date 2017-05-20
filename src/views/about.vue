@@ -12,15 +12,15 @@
         </p>
       </div>
       <div class="item">
-        <h2 class="title">github地址</h2>
+        <h2 class="title">github</h2>
         <p class="content">
-          <a href="https://github.com/BiggerHacker" target="_blank">https://github.com/BiggerHacker</a>
+          <a href="https://github.com/BiggerHacker/vue-Cnode" target="_blank">https://github.com/BiggerHacker/vue-Cnode</a>
         </p>
       </div>
       <div class="item">
-        <h2 class="title">联系qq</h2>
+        <h2 class="title">联系邮箱</h2>
         <p class="content">
-          1049025971
+          <a href="mailto:1049025971@qq.com">1049025971@qq.com</a>
         </p>
       </div>
     </div>
@@ -34,9 +34,6 @@
 </script>
 
 <style lang="scss" scoped>
-  .about {
-    padding-top: 60px;
-  }
   .about-head {
     margin-top: -1px;
     padding-top: 1px;

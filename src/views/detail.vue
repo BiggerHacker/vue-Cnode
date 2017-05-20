@@ -72,7 +72,6 @@
 
 <style lang="scss">
   .detail {
-    padding-top: 60px;
     padding-bottom: 60px;
   }
   .detail-wrap {

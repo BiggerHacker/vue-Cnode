@@ -30,6 +30,8 @@
       iconType () {
         switch (this.$route.name) {
           case 'detail':
+          case 'topic':
+          case 'replies':
             this.icon = false
             break
           case 'home':
@@ -62,6 +64,7 @@
   #app {
     width: 100%;
     height: 100%;
+    padding-top: 60px;
   }
   .tip-wrap {
     position: absolute;

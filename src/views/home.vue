@@ -135,7 +135,7 @@
     }
   }
   .topic-wrap {
-    padding-top: 100px;
+    padding-top: 40px;
   }
   .topic-item {
     border-bottom: 1px solid #444;

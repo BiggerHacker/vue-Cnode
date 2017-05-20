@@ -6,7 +6,9 @@ import Detail from '../views/detail'
 import User from '../views/user'
 import About from '../views/about'
 import Login from '../views/login'
-import Me from '../views/me'
+import Profile from '../views/profile'
+import Topic from '../views/topic'
+import Replies from '../views/replies'
 
 Vue.use(VueRouter)
 
@@ -42,9 +44,19 @@ const routes = [
     component: Login
   },
   {
-    path: '/me',
-    name: 'me',
-    component: Me
+    path: '/profile',
+    name: 'profile',
+    component: Profile
+  },
+  {
+    path: '/topic',
+    name: 'topic',
+    component: Topic
+  },
+  {
+    path: '/replies',
+    name: 'replies',
+    component: Replies
   }
 ]
 

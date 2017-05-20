@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import { mapActions } from 'vuex'
+  import { mapActions, mapGetters } from 'vuex'
   import api from '../api/api'
   import tip from '../util/tip'
   export default {
@@ -15,6 +15,11 @@
       return {
         token: ''
       }
+    },
+    computed: {
+      ...mapGetters({
+        loginInfo: 'loginInfo'
+      })
     },
     methods: {
       ...mapActions({
@@ -35,13 +40,18 @@
           console.log(error)
         })
       }
+    },
+    created () {
+      if (this.loginInfo.token) {
+        this.$router.push('/home')
+      }
     }
   }
 </script>
 
 <style lang="scss" scoped>
   .login {
-    padding: 75px 15px 15px;
+    padding: 15px 15px 15px;
   }
   .search-inp {
     padding: 0 5px;

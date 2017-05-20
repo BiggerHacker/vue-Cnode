@@ -7,18 +7,7 @@
           <li :class="{'active': showUserTab === 'topic'}" @click="toggleTab('topic')">主题</li>
           <li :class="{'active': showUserTab === 'replies'}" @click="toggleTab('replies')">回复</li>
         </ul>
-        <div class="tab-content" v-for="(usertab, index) in userTabs">
-          <router-link class="tab-content-link" :to="{name: 'detail', params: {id: usertab.id}}">
-            <div class="avatar">
-              <img width="100%" height="100%" :src="usertab.author.avatar_url" alt="">
-            </div>
-            <div class="info">
-              <div class="name">{{ usertab.author.loginname }}</div>
-              <div class="title">{{ usertab.title }}</div>
-              <div class="time">{{ usertab.last_reply_at | format }}</div>
-            </div>
-          </router-link>
-        </div>
+        <v-item :userTabs="userTabs"></v-item>
       </div>
     </div>
     <div v-show="loading">
@@ -31,9 +20,10 @@
   import { mapGetters } from 'vuex'
   import vAvatarCell from '@/components/vavatarCell'
   import vLoading from '@/components/vloading'
+  import vItem from '@/components/vitem'
   export default {
     name: 'user',
-    components: { vLoading, vAvatarCell },
+    components: { vLoading, vAvatarCell, vItem },
     computed: {
       ...mapGetters({
         userInfo: 'userInfo',
@@ -55,9 +45,6 @@
 </script>
 
 <style lang="scss" scoped>
-  .user {
-    padding-top: 60px;
-  }
   .user-tab {
     width: 100%;
     .tabs {
@@ -78,38 +65,6 @@
         &.active {
           color: #80bd01;
         }
-      }
-    }
-  }
-  .tab-content {
-    width: 100%;
-    .tab-content-link {
-      display: flex;
-      padding: 15px;
-      border-bottom: 1px solid #f0f0f0;
-      text-decoration: none;
-      color: #444;
-    }
-    .avatar {
-      width: 44px;
-      height: 44px;
-      margin-right: 15px;
-      img {
-        border-radius: 50%;
-      }
-    }
-    .info {
-      position: relative;
-      flex: 1;
-      font-size: 14px;
-      color: #444;
-      .name {
-        margin-bottom: 15px;
-      }
-      .time {
-        position: absolute;
-        right: 0;
-        top: 0;
       }
     }
   }

@@ -5,14 +5,14 @@
       <ul class="profile-list">
         <li>
           <router-link 
-            to="" 
+            to="/topic" 
             :style="{height: listWidth + 'px', 'line-height': listWidth + 'px'}">
             我的主题
           </router-link>
         </li>
         <li>
           <router-link 
-            to="" 
+            to="/replies" 
             :style="{height: listWidth + 'px', 'line-height': listWidth + 'px'}">
             我的回复
           </router-link>
@@ -42,7 +42,7 @@
   import { mapGetters } from 'vuex'
   import vAvatarCell from '@/components/vavatarCell'
   export default {
-    name: 'me',
+    name: 'profile',
     components: { vAvatarCell },
     data () {
       return {
@@ -81,7 +81,6 @@
 
 <style lang="scss" scoped>
   .profile-wrap {
-    padding-top: 60px;
     .to-login {
       text-align: center;
       margin-top: 80px;
