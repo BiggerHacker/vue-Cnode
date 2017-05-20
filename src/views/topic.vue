@@ -1,19 +1,24 @@
 <template>
-  <div class="profile-topic">
-    <v-item v-if="userInfo.recent_topics.length > 0" :userTabs="userInfo.recent_topics"></v-item>
-    <div class="data-none" v-if="userInfo.recent_topics.length === 0">
-      <i class="iconfont icon-data-none"></i>
-      <div class="text">空空哒</div>
-    </div>
+  <div class="profile-topic" v-if="userInfo">
+    <v-item 
+      v-if="userInfo.recent_topics.length" 
+      :userTabs="userInfo.recent_topics">
+    </v-item>
+    <v-none 
+      v-if="!userInfo.recent_topics.length" 
+      :icon="'icon-data-none'" 
+      :text="'空空哒'">
+    </v-none>
   </div>
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
   import vItem from '@/components/vitem'
+  import vNone from '@/components/vnone'
   export default {
     name: 'topic',
-    components: { vItem },
+    components: { vItem, vNone },
     computed: {
       ...mapGetters({
         loginInfo: 'loginInfo',
@@ -32,15 +37,5 @@
 </script>
 
 <style lang="scss" scoped>
-  .data-none {
-    text-align: center;
-    padding: 30px 0;
-    .iconfont {
-      font-size: 100px;
-    }
-    .text {
-      margin-top: 30px;
-      font-size: 24px;
-    }
-  }
+
 </style>
