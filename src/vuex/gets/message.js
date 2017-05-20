@@ -3,12 +3,12 @@ import * as types from '../types'
 
 const state = {
   unreadCount: 0,
-  readCount: 0
+  messageInfo: 0
 }
 
 const getters = {
   unreadCount: state => state.unreadCount,
-  readCount: state => state.readCount
+  messageInfo: state => state.messageInfo
 }
 
 const actions = {
@@ -29,7 +29,7 @@ const mutations = {
     state.unreadCount = res.data
   },
   [types.READ_MESSAGE] (state, res) {
-    state.readCount = res.data.has_read_messages.length
+    state.messageInfo = res.data
   }
 }
 

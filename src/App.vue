@@ -32,6 +32,8 @@
           case 'detail':
           case 'topic':
           case 'replies':
+          case 'notread':
+          case 'read':
             this.icon = false
             break
           case 'home':

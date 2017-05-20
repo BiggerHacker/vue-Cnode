@@ -1,5 +1,5 @@
 <template>
-  <div class="replies" v-if="userInfo">
+  <div class="profile-replies" v-if="userInfo">
     <v-item 
       v-if="userInfo.recent_replies.length" 
       :userTabs="userInfo.recent_replies">    

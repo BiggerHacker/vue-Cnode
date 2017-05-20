@@ -19,7 +19,7 @@
         </li>
         <li>
           <router-link 
-            to="" 
+            to="/notread" 
             :style="{height: listWidth + 'px', 'line-height': listWidth + 'px'}">
             未读消息
           </router-link>
@@ -27,11 +27,11 @@
         </li>
         <li>
           <router-link 
-            to="" 
+            to="/read" 
             :style="{height: listWidth + 'px', 'line-height': listWidth + 'px'}">
             已读消息
           </router-link>
-          <span class="count">{{ readCount }}</span>
+          <span v-if="messageInfo" class="count">{{ messageInfo.has_read_messages.length }}</span>
         </li>
       </ul>
     </div>
@@ -54,7 +54,7 @@
         userInfo: 'userInfo',
         loginInfo: 'loginInfo',
         unreadCount: 'unreadCount',
-        readCount: 'readCount'
+        messageInfo: 'messageInfo'
       })
     },
     methods: {

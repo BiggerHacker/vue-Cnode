@@ -9,6 +9,8 @@ import Login from '../views/login'
 import Profile from '../views/profile'
 import Topic from '../views/topic'
 import Replies from '../views/replies'
+import Notread from '../views/notread'
+import Read from '../views/read'
 
 Vue.use(VueRouter)
 
@@ -57,6 +59,16 @@ const routes = [
     path: '/replies',
     name: 'replies',
     component: Replies
+  },
+  {
+    path: '/notread',
+    name: 'notread',
+    component: Notread
+  },
+  {
+    path: '/read',
+    name: 'read',
+    component: Read
   }
 ]
 
