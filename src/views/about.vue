@@ -20,7 +20,7 @@
       <div class="item">
         <h2 class="title">联系邮箱</h2>
         <p class="content">
-          <a href="mailto:1049025971@qq.com">1049025971@qq.com</a>
+          <a href="mailto:biggerhacker1@gmail.com">biggerhacker1@gmail.com</a>
         </p>
       </div>
     </div>

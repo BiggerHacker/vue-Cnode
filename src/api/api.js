@@ -27,11 +27,11 @@ export default {
     return getResourse(param)
   },
   /**
-   * 获取登录状态
-   * @param  {[type]} param 用户token
+   * Post状态提交 login create
+   * @param  {[type]} param
    * @return {[type]}
    */
-  loginState (param) {
+  PostSub (param) {
     return getResourse(param, 'POST')
   }
 }

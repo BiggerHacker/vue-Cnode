@@ -70,18 +70,8 @@
         topics: 'topicsData'
       })
     },
-    beforeRouteEnter (to, from, next) {
-      next(vm => {
-        window.addEventListener('scroll', vm.scrollGetTopics, false)
-      })
-    },
-    beforeRouteLeave (to, from, next) {
-      window.removeEventListener('scroll', this.scrollGetTopics, false)
-      next()
-    },
     methods: {
       getTopics (i) {
-        this.topics = []
         window.scroll(0, 0)
         this.$store.commit('ITEMS_INDEX', i)
         this.$store.commit('TOPICS_KEY', {page: 0, limit: 20})
@@ -94,11 +84,15 @@
         }
       }
     },
-    created () {
+    mounted () {
       window.scroll(0, 0)
+      window.addEventListener('scroll', this.scrollGetTopics, false)
       if (this.topics.length === 0) {
         this.$store.dispatch('topicsData')
       }
+    },
+    destroyed () {
+      window.removeEventListener('scroll', this.scrollGetTopics, false)
     }
   }
 </script>

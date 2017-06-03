@@ -30,7 +30,7 @@
           tip.tip('token输入错误')
           return
         }
-        api.loginState(`/accesstoken/?accesstoken=${this.token}`).then(res => {
+        api.PostSub(`/accesstoken/?accesstoken=${this.token}`).then(res => {
           if (res.success) {
             let userInfo = Object.assign({token: this.token}, res)
             this.storageUserInfo(userInfo)

@@ -11,6 +11,7 @@ import Topic from '../views/topic'
 import Replies from '../views/replies'
 import Notread from '../views/notread'
 import Read from '../views/read'
+import Create from '../views/create'
 
 Vue.use(VueRouter)
 
@@ -69,10 +70,16 @@ const routes = [
     path: '/read',
     name: 'read',
     component: Read
+  },
+  {
+    path: '/create',
+    name: 'create',
+    component: Create
   }
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   linkActiveClass: 'active',
   routes
 })
